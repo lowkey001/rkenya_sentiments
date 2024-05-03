@@ -1,0 +1,75 @@
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <script type="text/javascript" data-lets-plot-script="library" src="https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.2/js-package/distr/lets-plot.min.js"></script>
+   </head>
+   <body>
+          <div id="W1gipy"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       var plotSpec={
+"data":{
+},
+"mapping":{
+},
+"data_meta":{
+"series_annotations":[{
+"column":"created_date",
+"type":"datetime"
+}]
+},
+"theme":{
+"line":{
+"blank":true
+},
+"axis_title":{
+"blank":true
+},
+"axis_text":{
+"blank":true
+},
+"legend_position":"none"
+},
+"ggtitle":{
+"text":"Sentiments on the topic"
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"pie",
+"mapping":{
+"fill":"sentiment"
+},
+"data_meta":{
+"mapping_annotations":[{
+"aes":"fill",
+"annotation":"as_discrete",
+"parameters":{
+"label":"sentiment",
+"order_by":"..count.."
+}
+}]
+},
+"labels":{
+"formats":[{
+"field":"..prop..",
+"format":".0%"
+}],
+"lines":["@sentiment","(@{..prop..})"]
+},
+"hole":0.5,
+"size":30.0,
+"data":{
+"..x..":[0.0,0.0,0.0],
+"..y..":[0.0,0.0,0.0],
+"..count..":[270.0,172.0,155.0],
+"sentiment":["neutral","positive","negative"],
+"..prop..":[0.45226130653266333,0.288107202680067,0.25963149078726966]
+}
+}],
+"metainfo_list":[]
+};
+       var plotContainer = document.getElementById("W1gipy");
+       LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+   </script>
+   </body>
+</html>

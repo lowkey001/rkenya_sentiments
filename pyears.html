@@ -1,0 +1,53 @@
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <script type="text/javascript" data-lets-plot-script="library" src="https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.3.2/js-package/distr/lets-plot.min.js"></script>
+   </head>
+   <body>
+          <div id="atxdbe"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+       var plotSpec={
+"data":{
+},
+"mapping":{
+"x":"created_year",
+"fill":"..count.."
+},
+"data_meta":{
+"series_annotations":[{
+"column":"created_date",
+"type":"datetime"
+}]
+},
+"theme":{
+"panel_grid_major_x":"blank"
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"fill",
+"palette":"Oranges",
+"scale_mapper_kind":"color_brewer"
+},{
+"aesthetic":"fill",
+"type":"seq",
+"scale_mapper_kind":"color_brewer"
+}],
+"layers":[{
+"geom":"bar",
+"mapping":{
+},
+"data_meta":{
+},
+"alpha":0.7,
+"data":{
+"..count..":[143.0,165.0,228.0,250.0,204.0,10.0],
+"created_year":[2024.0,2020.0,2023.0,2021.0,2022.0,2019.0]
+}
+}],
+"metainfo_list":[]
+};
+       var plotContainer = document.getElementById("atxdbe");
+       LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+   </script>
+   </body>
+</html>
